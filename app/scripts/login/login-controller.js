@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module('ngTestingApp')
-        .controller('LoginController', function () {
+        .controller('LoginController', function ($state) {
             var self = this;
 
             self.credentials = {
@@ -10,6 +10,11 @@
                 password: ''
             };
 
+            self.login = function (username, password) {
+                if(self.credentials.username === 'foo' && self.credentials.password === 'bar') {
+                    $state.go('home');
+                }
+            }
         });
 
 })();

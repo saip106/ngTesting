@@ -6,10 +6,17 @@
             return {
                 login: function (username, password) {
 
-                    if(username === 'guest' && password === 'guest') {
-                        return true;
-                    }
-                    return false;
+                    var deferred = $q.defer();
+
+                    $timeout(function () {
+                        if(username === 'guest' && password === 'guest') {
+                            deferred.resolve();
+                        }
+                        else {
+                            deferred.reject();
+                        }
+                    }, 1000);
+                    return deferred.promise;
                 }
             }
         });
