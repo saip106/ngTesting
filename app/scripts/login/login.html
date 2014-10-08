@@ -1,1 +1,7 @@
-<div>This is login</div>
+<div class="container">
+    <form name="loginForm">
+        <input type="text" ng-model="credentials.username" placeholder="username"/>
+        <input type="password" ng-model="credentials.password" placeholder="password"/>
+        <button type="button" class="btn btn-primary" ng-click="login(credentials.username, credentials.password)">Login</button>
+    </form>
+</div>
