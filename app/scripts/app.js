@@ -18,12 +18,12 @@
                 .state('login', {
                     url: '/',
                     templateUrl : 'scripts/login/login.html',
-                    controller : 'LoginController'
+                    controller : 'LoginController as controller'
                 })
                 .state('home', {
                     url: '/home',
                     templateUrl : 'scripts/home/home.html',
-                    controller : 'HomeController as home'
+                    controller : 'HomeController as controller'
                 });
         });
 

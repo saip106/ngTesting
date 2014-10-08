@@ -1,1 +1,6 @@
-<div>This is home...</div>
+<h2>This is home</h2>
+<div class="container" ng-init="controller.loadRepositories()">
+    <div ng-repeat="repository in controller.repositories">
+        <div>{{repository.name}}</div>
+    </div>
+</div>
